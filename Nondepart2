@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+#include<GL/glu.h>
+#include<GL/glut.h>
+#include <windows.h>
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+#include<GL/gl.h>
+using namespace std;
+
+void stairs() {
+    glBegin(GL_QUADS);
+    glColor3ub(150, 40, 27);
+    glVertex2f(-1.0f, -0.1f);
+    glVertex2f(-1.0f, -0.3f);
+    glVertex2f(1.0f, -0.3f);
+    glVertex2f(1.0f, -0.1f);
+    glEnd();
+
+    glBegin(GL_LINES);
+    glLineWidth(10);
+    glColor3ub(0, 0, 0);
+
+    glVertex2f(-1.0f, -0.13f);
+    glVertex2f(1.0f, -0.13f);
+
+    glVertex2f(-1.0f, -0.16f);
+    glVertex2f(1.0f, -0.16f);
+
+    glVertex2f(-1.0f, -0.2f);
+    glVertex2f(1.0f, -0.2f);
+
+    glVertex2f(-1.0f, -0.23f);
+    glVertex2f(1.0f, -0.23f);
+
+    glVertex2f(-1.0f, -0.26f);
+    glVertex2f(1.0f, -0.26f);
+
+    glVertex2f(-1.0f, -0.3f);
+    glVertex2f(1.0f, -0.3f);
+
+    glVertex2f(-1.0f, -0.1f);
+    glVertex2f(1.0f, -0.1f);
+
+    glEnd();
+}
+int main(int argc, char** argv) {
+    glutInit(&argc, argv);
+    glutInitWindowSize(1200, 720);
+    glutInitWindowPosition(50, 50);
+    glutCreateWindow("nonde");
+
+    glutDisplayFunc(stairs);
+
+
+    glutMainLoop();
+    return 0;
+}
