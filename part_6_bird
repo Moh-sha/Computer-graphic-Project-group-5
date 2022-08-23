@@ -1,0 +1,92 @@
+#include<bits/stdc++.h>
+#include<GL/glu.h>
+#include<GL/glut.h>
+#include <windows.h>
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+#include<GL/gl.h>
+using namespace std;
+
+
+
+
+
+GLfloat q = 0.0f;
+GLfloat position =0.0f;
+GLfloat position2=0.0f;
+GLfloat position3=0.0f;
+GLfloat speed = 0.009f;
+
+
+
+
+
+
+void bird() {
+
+
+
+   glPushMatrix();
+    glTranslatef(position,0.0,0.0);
+
+
+
+   glBegin(GL_LINES);
+    glColor3ub(255, 255, 255);
+
+
+
+   glVertex2f(0.2f, 0.8f);
+    glVertex2f(0.18f, 0.77f);
+
+
+
+   glVertex2f(0.18f, 0.77f);
+    glVertex2f(0.15f, 0.79f);
+
+
+
+   glEnd();
+
+
+
+   glBegin(GL_LINES);
+    glColor3ub(255, 255, 255);
+
+
+
+   glVertex2f(-0.1f, 0.8f);
+    glVertex2f(-0.13f, 0.77f);
+
+
+
+   glVertex2f(-0.13f, 0.77f);
+    glVertex2f(-0.15f, 0.8f);
+    glEnd();
+
+
+
+   glPopMatrix();
+    glFlush();
+}
+
+
+
+int main(int argc, char** argv) {
+    glutInit(&argc, argv);
+    glutInitWindowSize(1200, 720);
+    glutInitWindowPosition(50, 50);
+    glutCreateWindow("bird");
+
+
+
+   glutDisplayFunc(bird);
+
+
+
+
+
+  glutMainLoop();
+    return 0;
+}
