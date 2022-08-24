@@ -1023,7 +1023,7 @@ void circle(GLfloat X,GLfloat Y,GLfloat R,GLubyte r,GLubyte g,GLubyte b){ ///jot
 
 }
 
-void sun(){///Shaiaz Ali SA-301
+void sun(){  ///Shafin
     glTranslatef(.75,.85,0);
     glPushMatrix();
     glRotatef(e,0.0,0.0,0.30);
